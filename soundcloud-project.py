@@ -12,7 +12,7 @@ window.maxsize(800,600)
 
 #--------Functions----------
 def play(event):
-	client = soundcloud.Client(client_id="2f5ba833d7393adbdd4f5a5d23af34b0")
+	client = soundcloud.Client(client_id="")
 	if len(idEntry.get())==0:
 		track = client.get('/resolve', url=track_url)
 		track_id = str(track.id)
@@ -26,7 +26,7 @@ def play(event):
 def search(event):
 	search = searchEntry.get().lower()
 
-	client = soundcloud.Client(client_id="2f5ba833d7393adbdd4f5a5d23af34b0")
+	client = soundcloud.Client(client_id="")
 
 	tracks = client.get('/tracks', q=search)
 
@@ -43,7 +43,7 @@ def search(event):
 				text.insert('1.0',id)
 
 def download(event):
-	client = soundcloud.Client(client_id="2f5ba833d7393adbdd4f5a5d23af34b0")
+	client = soundcloud.Client(client_id="")
 	if len(idEntry.get())==0:
 		track_url = urlEntry.get()
 		track = client.get('/resolve', url=track_url)
