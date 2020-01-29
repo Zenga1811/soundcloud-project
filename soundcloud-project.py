@@ -128,7 +128,7 @@ btnPlay.bind("<Button-1>", play)
 #---------------------------------------------
 #----------Watermark--------------------------
 
-watermark_img = PhotoImage(file="/home/ive/Downloads/soundcloud.png")
+watermark_img = PhotoImage(file="WATERMARK_PATH")
 watermark = Button(ControlFrame, image=watermark_img, command=redirect)
 watermark.pack(side=LEFT)
 
